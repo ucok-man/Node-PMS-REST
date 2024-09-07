@@ -1,0 +1,23 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+
+  "compilerOptions": {
+    /*extending base options*/
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    "outDir": "dist",
+    "rootDir": "src",
+
+    /*stricness*/
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUncheckedIndexedAccess": true,
+
+    "sourceMap": true,
+    "allowJs": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
