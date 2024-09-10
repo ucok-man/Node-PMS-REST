@@ -22,6 +22,7 @@ format KEY:VALUE.
   | Configuration Key | Description                          |
   | ----------------- | ------------------------------------ |
   | PORT              | The port number on which project run |
+  | HOST              | The host server will run             |
 
 ## Compile Project
 
@@ -30,7 +31,7 @@ command with the --watch flag to enable automatic recompilation
 when changes are detected. Run the following command
 
 ```
-tsc --watch
+npm run build
 ```
 
 ## Run Project
@@ -38,11 +39,11 @@ tsc --watch
 - on local machine run during development
 
 ```
-nodemon dist/src/main.js
+npm run start:dev
 ```
 
 - on server after development
 
 ```
-node src/main.js
+npm run start
 ```
