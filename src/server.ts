@@ -9,7 +9,6 @@ export class ExpressServer {
 
   constructor() {
     const port = this.sever_config.port ?? 3000;
-    const host = this.sever_config.host ?? "localhost";
     const app = express();
 
     app.get("/ping", (_req, res) => {
@@ -17,9 +16,7 @@ export class ExpressServer {
     });
 
     ExpressServer.server = app.listen(port, () => {
-      console.log(
-        `Server running at http://${host}:${port} with pid ${process.pid}`,
-      );
+      console.log(`Server running at port ${port} with pid ${process.pid}`);
     });
   }
 
