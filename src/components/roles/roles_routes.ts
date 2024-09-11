@@ -1,11 +1,11 @@
 import { Express } from "express";
-import { TaskControllers } from "./tasks_controller";
+import { RoleControllers } from "./roles_controller";
 
-export class TaskRoutes {
-  private baseEndpoint = "/api/tasks";
+export class RoleRoutes {
+  private baseEndpoint = "/api/roles";
 
   constructor(app: Express) {
-    const controller = new TaskControllers();
+    const controller = new RoleControllers();
     app
       .route(this.baseEndpoint)
       .get(controller.getAllHandler)

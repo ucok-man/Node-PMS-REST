@@ -1,4 +1,4 @@
-export class UserControllers {
+export class CommentControllers {
   public addHandler() {}
 
   public getAllHandler() {}

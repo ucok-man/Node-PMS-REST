@@ -2,8 +2,8 @@ import cluster from "cluster";
 import { ExpressServer } from "./server";
 import { DatabaseUtils } from "./utils/db_utils";
 
-const server = new ExpressServer(); // create server
 new DatabaseUtils(); // Connect to database
+const server = new ExpressServer(); // create server
 
 process.on("uncaughtException", (error: Error) => {
   console.log(`Uncaught exception in worker process ${process.pid}: `, error);
