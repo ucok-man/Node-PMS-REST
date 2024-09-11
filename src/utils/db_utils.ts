@@ -1,5 +1,10 @@
 import { DataSource } from "typeorm";
 import config from "../../server_config.json";
+import { Comment } from "../components/comments/comment_entity";
+import { Project } from "../components/projects/projects_entity";
+import { Role } from "../components/roles/roles_entity";
+import { Task } from "../components/tasks/tasks_entity";
+import { User } from "../components/users/users_entity";
 import { IServerConfig } from "./config";
 
 export class DatabaseUtils {
@@ -19,7 +24,7 @@ export class DatabaseUtils {
         username: db_config.username,
         password: db_config.password,
         database: db_config.dbname,
-        entities: [],
+        entities: [Role, User, Project, Task, Comment],
         synchronize: true,
         logging: false,
       });
